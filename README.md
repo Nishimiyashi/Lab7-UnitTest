@@ -1,6 +1,8 @@
+# SEE TEST  RESULT'S REPORT FROM **REPORT.HTML** FILE
+
 # Meeting Planner - Unit Testing Project
 
-A comprehensive unit testing suite for a Java-based Meeting Planner application using JUnit 4.13.2 and Apache Ant build system.
+toA comprehensive unit testing suite for a Java-based Meeting Planner application using JUnit 4.13.2 and Apache Ant build system.
 
 ## Project Overview
 
