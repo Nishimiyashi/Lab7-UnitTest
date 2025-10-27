@@ -2,11 +2,11 @@
 
 A comprehensive unit testing suite for a Java-based Meeting Planner application using JUnit 4.13.2 and Apache Ant build system.
 
-## 📋 Project Overview
+## Project Overview
 
 This project implements a complete unit testing framework for the Meeting Planner system, consisting of **94 test methods** across **7 test classes**. The testing suite systematically validates all components of the meeting planning system and identifies bugs through comprehensive test coverage.
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 MeetingPlanner/
@@ -28,12 +28,11 @@ MeetingPlanner/
 │       ├── RoomTest.java               # Room class tests
 │       └── OrganizationTest.java       # Organization class tests
 ├── build.xml                          # Ant build configuration
-├── README.md                          # This file
 ├── report.html                        # Detailed HTML test report
 └── report_mongolian.html              # Mongolian version of report
 ```
 
-## 🧪 Test Classes
+## Test Classes
 
 ### CalendarTest.java (9 tests)
 Tests positive scenarios for Calendar class functionality including:
@@ -90,7 +89,7 @@ Organization class functionality:
 - Case sensitivity testing
 - Error handling
 
-## 📊 Test Results Summary
+## Test Results Summary
 
 | Test Class | Tests | Passed | Failed | Errors | Success Rate |
 |------------|-------|--------|--------|--------|--------------|
@@ -103,7 +102,7 @@ Organization class functionality:
 | OrganizationTest | 17 | 17 | 0 | 0 | 100% |
 | **TOTAL** | **94** | **75** | **12** | **7** | **80%** |
 
-## 🐛 Bugs Identified
+## Bugs Identified
 
 The testing suite successfully identified **12 critical bugs** in the main source code:
 
@@ -125,7 +124,7 @@ The testing suite successfully identified **12 critical bugs** in the main sourc
 11. **Calendar Zero-Duration Meeting Rejection** - Instant meetings rejected
 12. **Calendar Boundary Time Meeting Rejection** - Boundary time meetings rejected
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Java 17 or higher
@@ -170,31 +169,31 @@ ant test-report
 - `build` - Full build (clean, compile, test, javadoc, jar)
 - `help` - Display help message
 
-## 📈 Test Coverage
+## Test Coverage
 
 The testing suite provides comprehensive coverage across:
 
 ### Functional Testing
-- ✅ Core functionality validation
-- ✅ Data structure operations
-- ✅ Business logic verification
+- Core functionality validation
+- Data structure operations
+- Business logic verification
 
 ### Negative Testing
-- ✅ Invalid input handling
-- ✅ Error condition testing
-- ✅ Exception validation
+- Invalid input handling
+- Error condition testing
+- Exception validation
 
 ### Edge Case Testing
-- ✅ Boundary value testing
-- ✅ Extreme scenarios
-- ✅ Null and empty value handling
+- Boundary value testing
+- Extreme scenarios
+- Null and empty value handling
 
 ### Integration Testing
-- ✅ Component interactions
-- ✅ Cross-class functionality
-- ✅ System behavior validation
+- Component interactions
+- Cross-class functionality
+- System behavior validation
 
-## 🔧 Testing Methodology
+## Testing Methodology
 
 ### Test Design Principles
 1. **Comprehensive Coverage** - Test all public methods and scenarios
@@ -208,7 +207,7 @@ The testing suite provides comprehensive coverage across:
 - `test[MethodName]_[NegativeScenario]` - e.g., `testAddMeeting_invalidTime`
 - `test[Class]_[EdgeCase]` - e.g., `testCalendar_MidnightMeeting`
 
-## 📁 Generated Files
+## Generated Files
 
 After running tests, the following files are generated:
 - **Test Reports**: `build/test-reports/index.html`
@@ -216,7 +215,7 @@ After running tests, the following files are generated:
 - **Javadoc**: `build/javadoc/`
 - **JAR File**: `build/MeetingPlanner.jar`
 
-## 🎯 Key Findings
+## Key Findings
 
 - **80% test success rate** indicates core functionality works but edge cases need attention
 - **12 critical bugs** identified across different severity levels
@@ -224,14 +223,14 @@ After running tests, the following files are generated:
 - **CalendarTest** had the lowest success rate at 67%
 - Most issues relate to **boundary conditions** and **error handling**
 
-## 📚 Documentation
+## Documentation
 
 - **README.md** - This file (project overview and setup)
 - **report.html** - Detailed HTML test report with full analysis
 - **report_mongolian.html** - Mongolian version of the test report
 - **Javadoc** - Generated API documentation
 
-## 🤝 Contributing
+## Contributing
 
 This is a unit testing project focused on identifying bugs in the Meeting Planner system. The tests are designed to:
 
@@ -240,11 +239,11 @@ This is a unit testing project focused on identifying bugs in the Meeting Planne
 3. Provide comprehensive coverage
 4. Serve as regression tests
 
-## 📄 License
+## License
 
 This project is part of a unit testing laboratory exercise for educational purposes.
 
-## 📞 Support
+## Support
 
 For questions about the testing framework or test results, refer to:
 - The detailed HTML reports (`report.html` or `report_mongolian.html`)
