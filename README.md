@@ -1,69 +1,13 @@
-## See comprehensive test result's report from **REPORT.HTML** file
+## See REPORT.HTML for the detailed test results
 
 # Meeting Planner - Unit Testing Project
 
-toA comprehensive unit testing suite for a Java-based Meeting Planner application using JUnit 4.13.2 and Apache Ant build system.
+A comprehensive unit testing suite for a Java-based Meeting Planner application using JUnit 4.13.2 and Apache Ant build system.
 
 ## Project Overview
 
 This project implements a complete unit testing framework for the Meeting Planner system, consisting of **94 test methods** across **7 test classes**. The testing suite systematically validates all components of the meeting planning system and identifies bugs through comprehensive test coverage.
 
-## Test Classes
-
-### CalendarTest.java (9 tests)
-Tests positive scenarios for Calendar class functionality including:
-- Adding meetings in valid time slots
-- Multiple meetings on the same day
-- Busy status checking
-- Agenda printing
-- Meeting retrieval and removal
-
-### CalendarNegativeTest.java (18 tests)
-Tests negative scenarios and error conditions:
-- Invalid month/day/time values
-- Time conflicts and overlaps
-- Boundary value testing
-- Non-existent dates
-- Error handling validation
-
-### EdgeCaseTest.java (22 tests)
-Comprehensive edge case testing:
-- Leap year date validation
-- Midnight and late night meetings
-- Zero-duration meetings
-- Maximum meetings per day
-- Consecutive meetings
-- Null and empty value handling
-- Special characters and long strings
-
-### MeetingTest.java (7 tests)
-Meeting class functionality testing:
-- Constructor variations
-- Setter and getter methods
-- Attendee management
-- Data structure validation
-
-### PersonTest.java (11 tests)
-Person class and calendar management:
-- Person creation and naming
-- Meeting scheduling
-- Busy status checking
-- Agenda management
-- Time conflict handling
-
-### RoomTest.java (12 tests)
-Room class and calendar management:
-- Room creation and identification
-- Meeting scheduling
-- Multiple room scenarios
-- Calendar operations
-
-### OrganizationTest.java (17 tests)
-Organization class functionality:
-- Employee and room management
-- Search operations
-- Case sensitivity testing
-- Error handling
 
 ## Test Results Summary
 
