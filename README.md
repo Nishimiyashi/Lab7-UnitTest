@@ -1,4 +1,4 @@
-## SEE TEST  RESULT'S REPORT FROM **REPORT.HTML** FILE
+## See test result's report from **REPORT.HTML** file
 
 # Meeting Planner - Unit Testing Project
 
