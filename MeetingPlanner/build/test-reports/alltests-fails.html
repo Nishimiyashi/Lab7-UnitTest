@@ -1,0 +1,166 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Unit Test Results: All Failures</title>
+        <link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
+    </head>
+    <body onload="open('allclasses-frame.html','classListFrame')">
+        <h1>Unit Test Results.</h1>
+        <table width="100%">
+            <tr>
+                <td align="left"></td><td align="right">Designed for use with <a href="https://www.junit.org/">JUnit</a> and <a href="https://ant.apache.org/">Ant</a>.</td>
+            </tr>
+        </table>
+        <hr size="1">
+        <h2>All Failures</h2>
+        <table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+            <tr valign="top">
+                <th>Class</th><th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/0_CalendarNegativeTest.html">CalendarNegativeTest</a></td><td><a name="testEdgeCase_boundaryValues"></a><a href="edu/sc/csce747/MeetingPlanner/0_CalendarNegativeTest.html#testEdgeCase_boundaryValues">testEdgeCase_boundaryValues</a></td><td>Failure</td><td>Should not throw exception for maximum valid values: Month does not exist.
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Should not throw exception for maximum valid values: Month does not exist.
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.CalendarNegativeTest.testEdgeCase_boundaryValues(CalendarNegativeTest.java:288)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.020</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/0_CalendarNegativeTest.html">CalendarNegativeTest</a></td><td><a name="testAddMeeting_nonExistentDays"></a><a href="edu/sc/csce747/MeetingPlanner/0_CalendarNegativeTest.html#testAddMeeting_nonExistentDays">testAddMeeting_nonExistentDays</a></td><td>Failure</td><td>Should throw TimeConflictException for February 30
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Should throw TimeConflictException for February 30
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.CalendarNegativeTest.testAddMeeting_nonExistentDays(CalendarNegativeTest.java:250)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.003</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/1_CalendarTest.html">CalendarTest</a></td><td><a name="testAddMeeting_validTimeSlot"></a><a href="edu/sc/csce747/MeetingPlanner/1_CalendarTest.html#testAddMeeting_validTimeSlot">testAddMeeting_validTimeSlot</a></td><td>Failure</td><td>Should not throw exception: Meeting starts before it ends.
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Should not throw exception: Meeting starts before it ends.
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.CalendarTest.testAddMeeting_validTimeSlot(CalendarTest.java:43)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.023</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/1_CalendarTest.html">CalendarTest</a></td><td><a name="testIsBusy_validTimeRange"></a><a href="edu/sc/csce747/MeetingPlanner/1_CalendarTest.html#testIsBusy_validTimeRange">testIsBusy_validTimeRange</a></td><td>Failure</td><td>Should be busy when completely contains meeting
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Should be busy when completely contains meeting
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.CalendarTest.testIsBusy_validTimeRange(CalendarTest.java:76)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.005</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html">EdgeCaseTest</a></td><td><a name="testCalendar_MaximumMeetingsPerDay"></a><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html#testCalendar_MaximumMeetingsPerDay">testCalendar_MaximumMeetingsPerDay</a></td><td>Failure</td><td>Should be able to schedule maximum meetings per day: Overlap with another item - Meeting 0 - scheduled from 0 and 1
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Should be able to schedule maximum meetings per day: Overlap with another item - Meeting 0 - scheduled from 0 and 1
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.EdgeCaseTest.testCalendar_MaximumMeetingsPerDay(EdgeCaseTest.java:121)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.121</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html">EdgeCaseTest</a></td><td><a name="testCalendar_NonLeapYearFebruary29"></a><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html#testCalendar_NonLeapYearFebruary29">testCalendar_NonLeapYearFebruary29</a></td><td>Failure</td><td>February 29 should be invalid in non-leap years
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: February 29 should be invalid in non-leap years
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.EdgeCaseTest.testCalendar_NonLeapYearFebruary29(EdgeCaseTest.java:45)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.010</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html">EdgeCaseTest</a></td><td><a name="testCalendar_ConsecutiveMeetings"></a><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html#testCalendar_ConsecutiveMeetings">testCalendar_ConsecutiveMeetings</a></td><td>Failure</td><td>Consecutive meetings should be valid: Overlap with another item - Meeting 1 - scheduled from 9 and 10
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Consecutive meetings should be valid: Overlap with another item - Meeting 1 - scheduled from 9 and 10
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.EdgeCaseTest.testCalendar_ConsecutiveMeetings(EdgeCaseTest.java:138)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.009</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html">EdgeCaseTest</a></td><td><a name="testIsBusy_SingleHourRange"></a><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html#testIsBusy_SingleHourRange">testIsBusy_SingleHourRange</a></td><td>Failure</td><td>Should not be busy before
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Should not be busy before
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.EdgeCaseTest.testIsBusy_SingleHourRange(EdgeCaseTest.java:306)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.008</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html">EdgeCaseTest</a></td><td><a name="testIsBusy_ExactBoundaryTimes"></a><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html#testIsBusy_ExactBoundaryTimes">testIsBusy_ExactBoundaryTimes</a></td><td>Failure</td><td>Boundary time tests should work: Meeting starts before it ends.
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Boundary time tests should work: Meeting starts before it ends.
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.EdgeCaseTest.testIsBusy_ExactBoundaryTimes(EdgeCaseTest.java:294)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.008</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html">EdgeCaseTest</a></td><td><a name="testCalendar_ZeroDurationMeeting"></a><a href="edu/sc/csce747/MeetingPlanner/2_EdgeCaseTest.html#testCalendar_ZeroDurationMeeting">testCalendar_ZeroDurationMeeting</a></td><td>Failure</td><td>Zero-duration meetings should be valid: Meeting starts before it ends.
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Zero-duration meetings should be valid: Meeting starts before it ends.
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.EdgeCaseTest.testCalendar_ZeroDurationMeeting(EdgeCaseTest.java:101)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.010</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/5_PersonTest.html">PersonTest</a></td><td><a name="testIsBusy_validTime"></a><a href="edu/sc/csce747/MeetingPlanner/5_PersonTest.html#testIsBusy_validTime">testIsBusy_validTime</a></td><td>Failure</td><td>Should not throw exception: Meeting starts before it ends.
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Should not throw exception: Meeting starts before it ends.
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.PersonTest.testIsBusy_validTime(PersonTest.java:54)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.032</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a href="edu/sc/csce747/MeetingPlanner/6_RoomTest.html">RoomTest</a></td><td><a name="testIsBusy_validTime"></a><a href="edu/sc/csce747/MeetingPlanner/6_RoomTest.html#testIsBusy_validTime">testIsBusy_validTime</a></td><td>Failure</td><td>Should not throw exception: Meeting starts before it ends.
+                    <br>
+                    <br>
+                    <code>junit.framework.AssertionFailedError: Should not throw exception: Meeting starts before it ends.
+                        <br>
+                        	at edu.sc.csce747.MeetingPlanner.RoomTest.testIsBusy_validTime(RoomTest.java:54)
+                        <br>
+                        	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+                        <br>
+                    </code></td><td>0.033</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MeetingPlanner" default="compile" basedir=".">
+    
+    <!-- Project properties -->
+    <property name="src.dir" value="src/main/java"/>
+    <property name="test.dir" value="src/test/java"/>
+    <property name="build.dir" value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="test.classes.dir" value="${build.dir}/test-classes"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="javadoc.dir" value="${build.dir}/javadoc"/>
+    <property name="test.reports.dir" value="${build.dir}/test-reports"/>
+    
+    <!-- JUnit properties -->
+    <property name="junit.version" value="4.13.2"/>
+    <property name="hamcrest.version" value="1.3"/>
+    
+    <!-- Classpath definitions -->
+    <path id="compile.classpath">
+        <pathelement location="${classes.dir}"/>
+    </path>
+    
+    <path id="test.classpath">
+        <pathelement location="${classes.dir}"/>
+        <pathelement location="${test.classes.dir}"/>
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+    </path>
+    
+    <!-- Clean target -->
+    <target name="clean" description="Clean build directories">
+        <delete dir="${build.dir}"/>
+        <echo message="Cleaned build directories"/>
+    </target>
+    
+    <!-- Initialize target -->
+    <target name="init" description="Initialize build directories">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <mkdir dir="${javadoc.dir}"/>
+        <mkdir dir="${test.reports.dir}"/>
+        <mkdir dir="${lib.dir}"/>
+        <echo message="Initialized build directories"/>
+    </target>
+    
+    <!-- Download dependencies target -->
+    <target name="download-deps" description="Download JUnit dependencies" depends="init">
+        <echo message="Downloading JUnit dependencies..."/>
+        <get src="https://repo1.maven.org/maven2/junit/junit/${junit.version}/junit-${junit.version}.jar" 
+             dest="${lib.dir}/junit-${junit.version}.jar" 
+             skipexisting="true"/>
+        <get src="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/${hamcrest.version}/hamcrest-core-${hamcrest.version}.jar" 
+             dest="${lib.dir}/hamcrest-core-${hamcrest.version}.jar" 
+             skipexisting="true"/>
+        <echo message="Dependencies downloaded"/>
+    </target>
+    
+    <!-- Compile main source code -->
+    <target name="compile" description="Compile main source code" depends="init">
+        <echo message="Compiling main source code..."/>
+        <javac srcdir="${src.dir}" 
+               destdir="${classes.dir}" 
+               classpathref="compile.classpath"
+               includeantruntime="false"
+               debug="true">
+            <include name="**/*.java"/>
+        </javac>
+        <echo message="Main source code compiled successfully"/>
+    </target>
+    
+    <!-- Compile test source code -->
+    <target name="compile-tests" description="Compile test source code" depends="compile, download-deps">
+        <echo message="Compiling test source code..."/>
+        <javac srcdir="${test.dir}" 
+               destdir="${test.classes.dir}" 
+               classpathref="test.classpath"
+               includeantruntime="false"
+               debug="true">
+            <include name="**/*.java"/>
+        </javac>
+        <echo message="Test source code compiled successfully"/>
+    </target>
+    
+    <!-- Run unit tests -->
+    <target name="test" description="Run unit tests" depends="compile-tests">
+        <echo message="Running unit tests..."/>
+        <junit printsummary="yes" haltonfailure="no" haltonerror="no">
+            <classpath refid="test.classpath"/>
+            <formatter type="xml"/>
+            <formatter type="plain" usefile="false"/>
+            <batchtest todir="${test.reports.dir}">
+                <fileset dir="${test.classes.dir}">
+                    <include name="**/*Test.class"/>
+                </fileset>
+            </batchtest>
+        </junit>
+        <echo message="Unit tests completed"/>
+    </target>
+    
+    <!-- Run unit tests with detailed output -->
+    <target name="test-detailed" description="Run unit tests with detailed output" depends="compile-tests">
+        <echo message="Running unit tests with detailed output..."/>
+        <junit printsummary="yes" haltonfailure="no" haltonerror="no" fork="true">
+            <classpath refid="test.classpath"/>
+            <formatter type="xml"/>
+            <formatter type="plain" usefile="false"/>
+            <batchtest todir="${test.reports.dir}">
+                <fileset dir="${test.classes.dir}">
+                    <include name="**/*Test.class"/>
+                </fileset>
+            </batchtest>
+        </junit>
+        
+        <!-- Generate HTML test report -->
+        <junitreport todir="${test.reports.dir}">
+            <fileset dir="${test.reports.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report todir="${test.reports.dir}" format="frames"/>
+        </junitreport>
+        
+        <echo message="Detailed test report generated at ${test.reports.dir}/index.html"/>
+    </target>
+    
+    <!-- Generate Javadoc -->
+    <target name="javadoc" description="Generate Javadoc documentation" depends="compile">
+        <echo message="Generating Javadoc documentation..."/>
+        <javadoc destdir="${javadoc.dir}" 
+                 author="true" 
+                 version="true" 
+                 use="true" 
+                 windowtitle="Meeting Planner API Documentation"
+                 doctitle="Meeting Planner API Documentation"
+                 bottom="Copyright © 2024 Meeting Planner Project">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+            <classpath refid="compile.classpath"/>
+        </javadoc>
+        <echo message="Javadoc documentation generated at ${javadoc.dir}/index.html"/>
+    </target>
+    
+    <!-- Run the main application -->
+    <target name="run" description="Run the main application" depends="compile">
+        <echo message="Running Meeting Planner application..."/>
+        <java classname="edu.sc.csce747.MeetingPlanner.PlannerInterface" 
+              classpathref="compile.classpath" 
+              fork="true"/>
+    </target>
+    
+    <!-- Package the application -->
+    <target name="jar" description="Create JAR file" depends="compile">
+        <echo message="Creating JAR file..."/>
+        <jar destfile="${build.dir}/MeetingPlanner.jar" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="edu.sc.csce747.MeetingPlanner.PlannerInterface"/>
+            </manifest>
+        </jar>
+        <echo message="JAR file created: ${build.dir}/MeetingPlanner.jar"/>
+    </target>
+    
+    <!-- Full build target -->
+    <target name="build" description="Full build including tests and documentation" 
+            depends="clean, compile, compile-tests, test, javadoc, jar">
+        <echo message="Full build completed successfully"/>
+    </target>
+    
+    <!-- Help target -->
+    <target name="help" description="Display available targets">
+        <echo message="Available targets:"/>
+        <echo message="  clean        - Clean build directories"/>
+        <echo message="  init         - Initialize build directories"/>
+        <echo message="  compile      - Compile main source code"/>
+        <echo message="  compile-tests- Compile test source code"/>
+        <echo message="  test         - Run unit tests"/>
+        <echo message="  test-detailed- Run unit tests with detailed report"/>
+        <echo message="  javadoc      - Generate Javadoc documentation"/>
+        <echo message="  run          - Run the main application"/>
+        <echo message="  jar          - Create JAR file"/>
+        <echo message="  build        - Full build (clean, compile, test, javadoc, jar)"/>
+        <echo message="  help         - Display this help message"/>
+    </target>
+    
+</project>
