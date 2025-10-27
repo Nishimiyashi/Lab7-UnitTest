@@ -29,7 +29,6 @@ MeetingPlanner/
 │       └── OrganizationTest.java       # Organization class tests
 ├── build.xml                          # Ant build configuration
 ├── report.html                        # Detailed HTML test report
-└── report_mongolian.html              # Mongolian version of report
 ```
 
 ## Test Classes
@@ -215,40 +214,11 @@ After running tests, the following files are generated:
 - **Javadoc**: `build/javadoc/`
 - **JAR File**: `build/MeetingPlanner.jar`
 
-## Key Findings
-
-- **80% test success rate** indicates core functionality works but edge cases need attention
-- **12 critical bugs** identified across different severity levels
-- **MeetingTest and OrganizationTest** achieved 100% success rate
-- **CalendarTest** had the lowest success rate at 67%
-- Most issues relate to **boundary conditions** and **error handling**
-
 ## Documentation
 
 - **README.md** - This file (project overview and setup)
 - **report.html** - Detailed HTML test report with full analysis
-- **report_mongolian.html** - Mongolian version of the test report
 - **Javadoc** - Generated API documentation
-
-## Contributing
-
-This is a unit testing project focused on identifying bugs in the Meeting Planner system. The tests are designed to:
-
-1. Validate existing functionality
-2. Identify bugs and issues
-3. Provide comprehensive coverage
-4. Serve as regression tests
-
-## License
-
-This project is part of a unit testing laboratory exercise for educational purposes.
-
-## Support
-
-For questions about the testing framework or test results, refer to:
-- The detailed HTML reports (`report.html` or `report_mongolian.html`)
-- JUnit 4.13.2 documentation
-- Apache Ant documentation
 
 ---
 
@@ -257,4 +227,4 @@ For questions about the testing framework or test results, refer to:
 **Total Tests**: 94  
 **Success Rate**: 80%  
 **Bugs Found**: 12  
-**Last Updated**: December 27, 2024
+**Last Updated**: October 27, 2025
