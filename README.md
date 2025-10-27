@@ -1,4 +1,4 @@
-## See test result's report from **REPORT.HTML** file
+## See comprehensive test result's report from **REPORT.HTML** file
 
 # Meeting Planner - Unit Testing Project
 
@@ -7,31 +7,6 @@ toA comprehensive unit testing suite for a Java-based Meeting Planner applicatio
 ## Project Overview
 
 This project implements a complete unit testing framework for the Meeting Planner system, consisting of **94 test methods** across **7 test classes**. The testing suite systematically validates all components of the meeting planning system and identifies bugs through comprehensive test coverage.
-
-## Project Structure
-
-```
-MeetingPlanner/
-├── src/
-│   ├── main/java/edu/sc/csce747/MeetingPlanner/
-│   │   ├── Calendar.java              # Core calendar functionality
-│   │   ├── Meeting.java               # Meeting data structure
-│   │   ├── Person.java                # Person/Employee management
-│   │   ├── Room.java                  # Room management
-│   │   ├── Organization.java          # Organization management
-│   │   ├── PlannerInterface.java      # Main application interface
-│   │   └── TimeConflictException.java # Custom exception
-│   └── test/java/edu/sc/csce747/MeetingPlanner/
-│       ├── CalendarTest.java           # Calendar positive tests
-│       ├── CalendarNegativeTest.java   # Calendar negative tests
-│       ├── EdgeCaseTest.java           # Edge case and boundary tests
-│       ├── MeetingTest.java            # Meeting class tests
-│       ├── PersonTest.java             # Person class tests
-│       ├── RoomTest.java               # Room class tests
-│       └── OrganizationTest.java       # Organization class tests
-├── build.xml                          # Ant build configuration
-├── report.html                        # Detailed HTML test report
-```
 
 ## Test Classes
 
